@@ -25,6 +25,8 @@ class Take:
                 return self.priority == "2"
             elif self.time2 >= self.time1 * (2/3) and self.time2 <= self.time1:
                 return self.priority == "3"
+        elif self.time1 == 0:
+            return f'{self.name}: {self.jod} needs to be comlepted today'
         else:
             return f'{self.name}: {self.jod} has been overdue'
 
@@ -36,3 +38,7 @@ class Take:
 
     def __repr__(self):
         return f'Name: {self.name}, Job: {self.jod}, Priority: {self.priority}, Status: {self.status}'
+
+
+class ChangeTake:
+    
